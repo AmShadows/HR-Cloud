@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index-before.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/index-before.js"></script>
+	</head>
+	<style>
+		body {
+			background-image: url(img/风景.jpg);
+			background-size: 100%;
+			background-repeat: no-repeat;
+		}
+	</style>
+
+	<body onload="clockon()">
+		<div class="row" style="height: 350px;">
+			<div class="col-md-6 img-wai">
+				<img id="img" src="img/云.png" class="img-logo" />
+			</div>
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-5">
+				<div class="font-right1 ">
+					<p><i>cloud computing</i></p>
+				</div>
+				<div class="font-right2 text-center">
+					<p><i>This is my dream ! ! !</i></p>
+				</div>
+				<div class="font-right3 text-center">
+					<div class="row1" id="time1">
+
+					</div>
+					<div class="row1">
+						<div id="hour1"></div>
+						<div class=""><i>HOURS</i></div>
+					</div>
+					<div class="row1">
+						<div id="min1"></div>
+						<div class=""><i>MINUTES</i></div>
+					</div>
+					<div class="row1">
+						<div id="sec1"></div>
+						<div class=""><i>SECOND</i>S</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" style="height: 220px;">
+			&nbsp;
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="index-footer-left">
+					<input style="background-color: transparent; border: 0px solid black;border-radius:20px ;" placeholder="Please search for your things"> &nbsp;
+					<input type="button" value="search" style="border-radius: 20px;" />
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="footer-glyphicon text-center">
+					<audio controls="controls">
+						<source src="music/George Winston - Variations on The Canon By Pachelbel - 钢琴版纯音乐.mp3"></source>
+						<source src="music/George Winston - Variations on The Canon By Pachelbel - 钢琴版纯音乐.ape"></source>
+						<source src="music/George Winston - Variations on The Canon By Pachelbel - 钢琴版纯音乐.wav"></source>
+					</audio>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="dianji">
+					<a href="index.html" style="color: white;">点击入口>>>></a>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

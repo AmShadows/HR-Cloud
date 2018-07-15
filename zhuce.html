@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+        <script>
+    	$(document).ready(function() {
+    		
+            var ok1=false;
+            var ok2=false;
+            var ok3=false;
+    		$("input:text").blur(function() {
+					if($(this).val() == null || $(this).val() == "") {
+						$(this).addClass("userRed");
+						$("#error").get(0).innerHTML = "账号不为空！";
+						$(this).focus();
+//						return;
+					} else if($(this).val().length <10 || $(this).val().length > 11) {
+						$(this).addClass("userRed");
+						$("#error").get(0).innerHTML = "账号长度应为10或11位！";
+						$(this).focus();
+//						return;
+					} else {
+						$(this).removeClass("userRed");
+						$("#error").get(0).innerHTML = "";
+						ok1=true;
+					}
+			});
+		    $("input:password").blur(function() {
+					if($(this).val() == null || $(this).val() == "") {
+						$(this).addClass("userRed");
+						$("#error").get(0).innerHTML = "密码不为空！";
+						$(this).focus();
+//						return;
+					} else if($(this).val().length >20 ) {
+						$(this).addClass("userRed");
+						$("#error").get(0).innerHTML = "密码长度应小于20位！";
+						$(this).focus();
+//						return;
+					} else {
+						$(this).removeClass("userRed");
+						$("#error").get(0).innerHTML = "";
+					    ok2=true;
+					}
+			});
+			$('input[name="repass"]').blur(function() {
+					if($(this).val() == null || $(this).val() == "") {
+						$(this).addClass("userRed");
+						$("#error").get(0).innerHTML = "确认密码不为空！";
+						$(this).focus();
+//						return;
+					} else if($(this).val().length >20 ) {
+						$(this).addClass("userRed");
+						$("#error").get(0).innerHTML = "确认密码长度应小于20位！";
+						$(this).focus();
+//						return;
+					} else {
+						$(this).removeClass("userRed");
+						$("#error").get(0).innerHTML = "";
+					    ok3=true;
+					}
+			});
+			$('.submit').click(function(){
+                    if(ok1 && ok2 && ok3){
+                    	alert("注册成功");
+                    	window.location.href = "denglu.html";
+//                      $('form').submit();
+                    }else{
+                        return false;
+                    }
+            });
+    	});	
+    </script>
+	</head>
+	<style type="text/css">
+	
+		.header {
+			background-image: url(img/bg3.jpg);
+			height: 700px;
+			background-size: 100% 100%;
+			-moz-background-size: 100% 100%;
+			-webkit-background-size: 100% 100%;
+		}
+		
+		.btn-circle {
+			width: 30px;
+			height: 30px;
+			text-align: center;
+			padding: 6px 0;
+			font-size: 12px;
+			line-height: 1.428571429;
+			border-radius: 15px;
+		}
+		
+		.btn-circle.btn-xl {
+			width: 70px;
+			height: 70px;
+			padding: 10px 16px;
+			font-size: 24px;
+			line-height: 1.33;
+			border-radius: 35px;
+		}
+		.nav.div.div.a{color: white;}
+		.userRed{
+			border-color: red;
+		}
+	</style>
+
+	<body>
+
+		<!-- Navigation -->
+		<nav class="navbar navbar-custom navbar-fixed-top navbar-expand-sm navbar-default role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    
+                    <a class="navbar-brand glyphicon glyphicon-th" id=""></a>
+                    <!--<a class="navbar-brand"><img class="navbar-img" src="img/华软logo.jpg"/></a>-->
+					<a class="navbar-brand navbar-font">华软云</a>
+				
+				</div>
+
+				<div class="navbar-collapse collapse" role="navigation">
+					<ul class="nav navbar-nav  hidden-sm  ">
+						<li>
+							<a class="navbar-brand"></a>
+						</li>
+						<li>
+							<a>产品</a>
+						</li>
+						<li>
+							<a>解决方案</a>
+						</li>
+						<li>
+							<a>云市场</a>
+						</li>
+						<li>
+							<a>云社区</a>
+						</li>
+						<li>
+							<a>合作与生态</a>
+						</li>
+
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						
+						<li>
+							<a href="image-wall.html">照片墙</a>
+						</li>
+						<li>
+							<a href="zhuce.html">注册</a>
+						</li>
+						<li>
+							<a href="denglu.html">登录</a>
+						</li>
+						<li>
+							<a>控制台</a>
+						</li>
+						<li>
+							<a href="index.html">首页</a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Header -->
+		<header class="header header-background">
+			
+				
+				
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 ">
+						<h1>&nbsp;</h1>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 ">
+						<h1>&nbsp;</h1>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 ">
+						<div class="">
+							<img src="img/华软登录云.png" style="width: 800px;height: 600px ;margin-left: 90px;"/>
+						</div>
+						
+						<div class="denglukuang">
+							<div class="denglu-top">
+								云注册
+							</div>
+							<div class="denglu-table">
+								<input type="text" placeholder="学号/邮箱/手机号" name="name" id="name" value="" style="width:75%;height:40px" />
+							</div>
+							<div class="denglu-table">
+								<input type="password" placeholder="密码" name="password" id="password" value="" style="width:75%;height:40px" />
+							</div>
+							<div class="denglu-table">
+								<input type="password" placeholder="确认密码" name="repass" id="repass" value="" style="width:75%;height:40px" />
+							</div>
+							<div class="denglu-table" id="error" ></div>
+							<div class="denglu-table">
+								<input type="checkbox" name="" id="" value=""  />
+								我已阅读并同意<a>《华软云用户协议》</a>
+							</div>
+							<div class="denglu-table">
+								<input type="button"  class="submit" name="" id="" value="同意协议并提交" style="width: 75%; height: 40px;" />
+							</div>
+							
+							<div class="denglu-table">
+								已有账号 <a href="denglu.html">立即登录>></a>
+							</div>
+							
+						</div>
+					</div>
+
+				
+			</div>
+		</header>
+		<!-- Demo1 Section -->
+		<section id="demo1">
+			
+		</section>
+
+	</body>
+
+</html>
